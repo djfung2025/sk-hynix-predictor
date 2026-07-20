@@ -1,6 +1,6 @@
 [
   {
-    "date": "2026-05-11",
+    "date": "2026-05-12",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5251,
@@ -9,7 +9,7 @@
     "trend": "高开低走，收跌"
   },
   {
-    "date": "2026-05-12",
+    "date": "2026-05-13",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5237,
@@ -18,7 +18,7 @@
     "trend": "小幅低开，收盘大涨"
   },
   {
-    "date": "2026-05-13",
+    "date": "2026-05-14",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5236,
@@ -27,7 +27,7 @@
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-05-14",
+    "date": "2026-05-15",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5214,
@@ -36,7 +36,7 @@
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-05-17",
+    "date": "2026-05-18",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5206,
@@ -45,7 +45,7 @@
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-05-18",
+    "date": "2026-05-19",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5187,
@@ -54,7 +54,7 @@
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-05-19",
+    "date": "2026-05-20",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5176,
@@ -63,7 +63,7 @@
     "trend": "小幅低开，平收"
   },
   {
-    "date": "2026-05-20",
+    "date": "2026-05-21",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5566,
@@ -72,7 +72,7 @@
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-05-21",
+    "date": "2026-05-22",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5161,
@@ -81,7 +81,7 @@
     "trend": "平开平收"
   },
   {
-    "date": "2026-05-25",
+    "date": "2026-05-26",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5162,
@@ -90,7 +90,7 @@
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-05-26",
+    "date": "2026-05-27",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5166,
@@ -99,7 +99,7 @@
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-05-27",
+    "date": "2026-05-28",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.515,
@@ -108,7 +108,7 @@
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-05-28",
+    "date": "2026-05-29",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5144,
@@ -117,7 +117,7 @@
     "trend": "小幅高开，收盘小涨"
   },
   {
-    "date": "2026-05-31",
+    "date": "2026-06-01",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5134,
@@ -126,7 +126,7 @@
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-06-01",
+    "date": "2026-06-02",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.513,
@@ -135,7 +135,7 @@
     "trend": "平开平收"
   },
   {
-    "date": "2026-06-03",
+    "date": "2026-06-04",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5127,
@@ -144,7 +144,7 @@
     "trend": "小幅低开，收盘小跌"
   },
   {
-    "date": "2026-06-04",
+    "date": "2026-06-05",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5116,
@@ -153,7 +153,7 @@
     "trend": "低开，收盘大跌"
   },
   {
-    "date": "2026-06-07",
+    "date": "2026-06-08",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5115,
@@ -162,7 +162,7 @@
     "trend": "低开，收盘大跌"
   },
   {
-    "date": "2026-06-08",
+    "date": "2026-06-09",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5109,
@@ -171,7 +171,7 @@
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5105,
@@ -180,7 +180,7 @@
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-06-10",
+    "date": "2026-06-11",
     "personal": "正",
     "foreign": "正",
     "foreignRatio": 0.511,
@@ -189,7 +189,7 @@
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-06-11",
+    "date": "2026-06-12",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5119,
@@ -198,7 +198,7 @@
     "trend": "高开，收盘小涨"
   },
   {
-    "date": "2026-06-14",
+    "date": "2026-06-15",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5123,
@@ -207,7 +207,7 @@
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-06-15",
+    "date": "2026-06-16",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5129,
@@ -216,7 +216,7 @@
     "trend": "高开走V，收盘小涨"
   },
   {
-    "date": "2026-06-16",
+    "date": "2026-06-17",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.513,
@@ -225,7 +225,7 @@
     "trend": "小幅低开，收盘大涨"
   },
   {
-    "date": "2026-06-17",
+    "date": "2026-06-18",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5131,
@@ -234,7 +234,7 @@
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-06-18",
+    "date": "2026-06-19",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5125,
@@ -243,7 +243,7 @@
     "trend": "高开，收盘小涨"
   },
   {
-    "date": "2026-06-21",
+    "date": "2026-06-22",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5115,
@@ -252,7 +252,7 @@
     "trend": "平开，收盘大涨"
   },
   {
-    "date": "2026-06-22",
+    "date": "2026-06-23",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5099,
@@ -261,7 +261,7 @@
     "trend": "平开，收盘大跌"
   },
   {
-    "date": "2026-06-23",
+    "date": "2026-06-24",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5078,
@@ -270,7 +270,7 @@
     "trend": "小幅高开，收盘平"
   },
   {
-    "date": "2026-06-24",
+    "date": "2026-06-25",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5077,
@@ -279,7 +279,7 @@
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-06-25",
+    "date": "2026-06-26",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5063,
@@ -288,7 +288,7 @@
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-06-28",
+    "date": "2026-06-29",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5044,
@@ -297,7 +297,7 @@
     "trend": "小幅低开，收盘小跌"
   },
   {
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5036,
@@ -306,7 +306,7 @@
     "trend": "小幅高开，收盘小涨"
   },
   {
-    "date": "2026-06-30",
+    "date": "2026-07-01",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.504,
@@ -315,7 +315,7 @@
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-07-01",
+    "date": "2026-07-02",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5028,
@@ -324,7 +324,7 @@
     "trend": "低开，收盘大跌"
   },
   {
-    "date": "2026-07-02",
+    "date": "2026-07-03",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5017,
@@ -333,7 +333,7 @@
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-07-05",
+    "date": "2026-07-06",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5017,
@@ -342,7 +342,7 @@
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-07-06",
+    "date": "2026-07-07",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5006,
@@ -351,7 +351,7 @@
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-07-07",
+    "date": "2026-07-08",
     "personal": "正",
     "foreign": "正",
     "foreignRatio": 0.5005,
@@ -360,7 +360,7 @@
     "trend": "低开走高再走低，收盘大跌"
   },
   {
-    "date": "2026-07-08",
+    "date": "2026-07-09",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5001,
@@ -369,7 +369,7 @@
     "trend": "高开走V，收盘大涨"
   },
   {
-    "date": "2026-07-09",
+    "date": "2026-07-10",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.4987,
@@ -378,7 +378,7 @@
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-07-12",
+    "date": "2026-07-13",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.4977,
@@ -387,7 +387,7 @@
     "trend": "平开，收盘大跌"
   },
   {
-    "date": "2026-07-13",
+    "date": "2026-07-14",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.4988,
@@ -396,7 +396,7 @@
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-07-14",
+    "date": "2026-07-15",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5244,
@@ -405,7 +405,7 @@
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-07-15",
+    "date": "2026-07-16",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5237,

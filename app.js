@@ -1,7 +1,7 @@
 // Built-in default records to bypass local CORS file:// issues
 const DEFAULT_RECORDS = [
   {
-    "date": "2026-05-11",
+    "date": "2026-05-12",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5251,
@@ -10,7 +10,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开低走，收跌"
   },
   {
-    "date": "2026-05-12",
+    "date": "2026-05-13",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5237,
@@ -19,7 +19,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大涨"
   },
   {
-    "date": "2026-05-13",
+    "date": "2026-05-14",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5236,
@@ -28,7 +28,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-05-14",
+    "date": "2026-05-15",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5214,
@@ -37,7 +37,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-05-17",
+    "date": "2026-05-18",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5206,
@@ -46,7 +46,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-05-18",
+    "date": "2026-05-19",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5187,
@@ -55,7 +55,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-05-19",
+    "date": "2026-05-20",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5176,
@@ -64,7 +64,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，平收"
   },
   {
-    "date": "2026-05-20",
+    "date": "2026-05-21",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5566,
@@ -73,7 +73,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-05-21",
+    "date": "2026-05-22",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5161,
@@ -82,7 +82,7 @@ const DEFAULT_RECORDS = [
     "trend": "平开平收"
   },
   {
-    "date": "2026-05-25",
+    "date": "2026-05-26",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5162,
@@ -91,7 +91,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-05-26",
+    "date": "2026-05-27",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5166,
@@ -100,7 +100,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-05-27",
+    "date": "2026-05-28",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.515,
@@ -109,7 +109,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-05-28",
+    "date": "2026-05-29",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5144,
@@ -118,7 +118,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘小涨"
   },
   {
-    "date": "2026-05-31",
+    "date": "2026-06-01",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5134,
@@ -127,7 +127,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-06-01",
+    "date": "2026-06-02",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.513,
@@ -136,7 +136,7 @@ const DEFAULT_RECORDS = [
     "trend": "平开平收"
   },
   {
-    "date": "2026-06-03",
+    "date": "2026-06-04",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5127,
@@ -145,7 +145,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小跌"
   },
   {
-    "date": "2026-06-04",
+    "date": "2026-06-05",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5116,
@@ -154,7 +154,7 @@ const DEFAULT_RECORDS = [
     "trend": "低开，收盘大跌"
   },
   {
-    "date": "2026-06-07",
+    "date": "2026-06-08",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5115,
@@ -163,7 +163,7 @@ const DEFAULT_RECORDS = [
     "trend": "低开，收盘大跌"
   },
   {
-    "date": "2026-06-08",
+    "date": "2026-06-09",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5109,
@@ -172,7 +172,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5105,
@@ -181,7 +181,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-06-10",
+    "date": "2026-06-11",
     "personal": "正",
     "foreign": "正",
     "foreignRatio": 0.511,
@@ -190,7 +190,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-06-11",
+    "date": "2026-06-12",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5119,
@@ -199,7 +199,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘小涨"
   },
   {
-    "date": "2026-06-14",
+    "date": "2026-06-15",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5123,
@@ -208,7 +208,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-06-15",
+    "date": "2026-06-16",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5129,
@@ -217,7 +217,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开走V，收盘小涨"
   },
   {
-    "date": "2026-06-16",
+    "date": "2026-06-17",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.513,
@@ -226,7 +226,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大涨"
   },
   {
-    "date": "2026-06-17",
+    "date": "2026-06-18",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5131,
@@ -235,7 +235,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-06-18",
+    "date": "2026-06-19",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5125,
@@ -244,7 +244,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘小涨"
   },
   {
-    "date": "2026-06-21",
+    "date": "2026-06-22",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5115,
@@ -253,7 +253,7 @@ const DEFAULT_RECORDS = [
     "trend": "平开，收盘大涨"
   },
   {
-    "date": "2026-06-22",
+    "date": "2026-06-23",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5099,
@@ -262,7 +262,7 @@ const DEFAULT_RECORDS = [
     "trend": "平开，收盘大跌"
   },
   {
-    "date": "2026-06-23",
+    "date": "2026-06-24",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5078,
@@ -271,7 +271,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘平"
   },
   {
-    "date": "2026-06-24",
+    "date": "2026-06-25",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5077,
@@ -280,7 +280,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-06-25",
+    "date": "2026-06-26",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5063,
@@ -289,7 +289,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-06-28",
+    "date": "2026-06-29",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5044,
@@ -298,7 +298,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小跌"
   },
   {
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5036,
@@ -307,7 +307,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘小涨"
   },
   {
-    "date": "2026-06-30",
+    "date": "2026-07-01",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.504,
@@ -316,7 +316,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-07-01",
+    "date": "2026-07-02",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5028,
@@ -325,7 +325,7 @@ const DEFAULT_RECORDS = [
     "trend": "低开，收盘大跌"
   },
   {
-    "date": "2026-07-02",
+    "date": "2026-07-03",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5017,
@@ -334,7 +334,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘大涨"
   },
   {
-    "date": "2026-07-05",
+    "date": "2026-07-06",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5017,
@@ -343,7 +343,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-07-06",
+    "date": "2026-07-07",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5006,
@@ -352,7 +352,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘大跌"
   },
   {
-    "date": "2026-07-07",
+    "date": "2026-07-08",
     "personal": "正",
     "foreign": "正",
     "foreignRatio": 0.5005,
@@ -361,7 +361,7 @@ const DEFAULT_RECORDS = [
     "trend": "低开走高再走低，收盘大跌"
   },
   {
-    "date": "2026-07-08",
+    "date": "2026-07-09",
     "personal": "负",
     "foreign": "负",
     "foreignRatio": 0.5001,
@@ -370,7 +370,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开走V，收盘大涨"
   },
   {
-    "date": "2026-07-09",
+    "date": "2026-07-10",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.4987,
@@ -379,7 +379,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅高开，收盘小跌"
   },
   {
-    "date": "2026-07-12",
+    "date": "2026-07-13",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.4977,
@@ -388,7 +388,7 @@ const DEFAULT_RECORDS = [
     "trend": "平开，收盘大跌"
   },
   {
-    "date": "2026-07-13",
+    "date": "2026-07-14",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.4988,
@@ -397,7 +397,7 @@ const DEFAULT_RECORDS = [
     "trend": "小幅低开，收盘小涨"
   },
   {
-    "date": "2026-07-14",
+    "date": "2026-07-15",
     "personal": "负",
     "foreign": "正",
     "foreignRatio": 0.5244,
@@ -406,7 +406,7 @@ const DEFAULT_RECORDS = [
     "trend": "高开，收盘大涨"
   },
   {
-    "date": "2026-07-15",
+    "date": "2026-07-16",
     "personal": "正",
     "foreign": "负",
     "foreignRatio": 0.5237,
@@ -538,7 +538,25 @@ async function loadData() {
         try {
             const data = await fetchFromGitHub();
             if (data && Array.isArray(data)) {
-                state.records = sortRecords(data);
+                let records = data;
+                if (records.length > 0 && records[0].date === '2026-05-11') {
+                    records = records.map(r => {
+                        const parts = r.date.split('-');
+                        if (parts.length === 3) {
+                            const y = parseInt(parts[0], 10);
+                            const m = parseInt(parts[1], 10) - 1;
+                            const d = parseInt(parts[2], 10);
+                            const dateObj = new Date(y, m, d);
+                            dateObj.setDate(dateObj.getDate() + 1);
+                            const year = dateObj.getFullYear();
+                            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+                            const day = String(dateObj.getDate()).padStart(2, '0');
+                            r.date = `${year}-${month}-${day}`;
+                        }
+                        return r;
+                    });
+                }
+                state.records = sortRecords(records);
                 saveLocalCopy(state.records);
                 refreshUI();
                 showToast('已从 GitHub 同步最新数据', 'success');
@@ -553,9 +571,28 @@ async function loadData() {
     // 2. Try loading from LocalStorage
     const localData = localStorage.getItem('hynix_records');
     if (localData) {
-        state.records = sortRecords(JSON.parse(localData));
+        let records = JSON.parse(localData);
+        if (records && records.length > 0 && records[0].date === '2026-05-11') {
+            records = records.map(r => {
+                const parts = r.date.split('-');
+                if (parts.length === 3) {
+                    const y = parseInt(parts[0], 10);
+                    const m = parseInt(parts[1], 10) - 1;
+                    const d = parseInt(parts[2], 10);
+                    const dateObj = new Date(y, m, d);
+                    dateObj.setDate(dateObj.getDate() + 1);
+                    const year = dateObj.getFullYear();
+                    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+                    const day = String(dateObj.getDate()).padStart(2, '0');
+                    r.date = `${year}-${month}-${day}`;
+                }
+                return r;
+            });
+            localStorage.setItem('hynix_records', JSON.stringify(records));
+        }
+        state.records = sortRecords(records);
         refreshUI();
-        showToast('已加载本地缓存数据', 'success');
+        showToast('已加载本地缓存数据并升级偏移日期', 'success');
         return;
     }
 
@@ -590,6 +627,51 @@ function refreshUI() {
     renderDashboardStats();
     renderRecordsTable();
     renderCharts();
+    initPredictorState();
+}
+
+// Prefill predictor input and update comparison label
+function initPredictorState() {
+    if (state.records.length === 0) return;
+    
+    const latestRecord = state.records[state.records.length - 1];
+    const slider = document.getElementById('pred-short-ratio');
+    if (slider) {
+        if (latestRecord.shortRatio !== null && !slider.dataset.userModified) {
+            const targetVal = (latestRecord.shortRatio * 100).toFixed(2);
+            slider.value = targetVal;
+        }
+        updateShortRatioCompareLabel(parseFloat(slider.value) || 0);
+    }
+}
+
+// Update short selling ratio comparison label
+function updateShortRatioCompareLabel(inputValue) {
+    const compareEl = document.getElementById('pred-short-compare');
+    if (!compareEl) return;
+    
+    if (state.records.length === 0) {
+        compareEl.textContent = '暂无历史记录';
+        return;
+    }
+    
+    const latestRecord = state.records[state.records.length - 1];
+    if (latestRecord.shortRatio === null || latestRecord.shortRatio === undefined) {
+        compareEl.textContent = '最新记录暂无卖空比';
+        return;
+    }
+    
+    const latestPct = (latestRecord.shortRatio * 100);
+    const diff = inputValue - latestPct;
+    
+    const dateStr = latestRecord.date.substring(5); // e.g. "07-16"
+    if (diff > 0) {
+        compareEl.innerHTML = `较最新记录 (${dateStr}: ${latestPct.toFixed(2)}%) <span style="color: #10b981; font-weight: 600;">增加 +${diff.toFixed(2)}%</span>`;
+    } else if (diff < 0) {
+        compareEl.innerHTML = `较最新记录 (${dateStr}: ${latestPct.toFixed(2)}%) <span style="color: #ef4444; font-weight: 600;">减少 ${diff.toFixed(2)}%</span>`;
+    } else {
+        compareEl.innerHTML = `较最新记录 (${dateStr}: ${latestPct.toFixed(2)}%) <span style="color: #94a3b8; font-weight: 600;">持平</span>`;
+    }
 }
 
 // Render metrics on dashboard
@@ -806,7 +888,7 @@ function renderCharts() {
 }
 
 // Calculate similarity for predictions
-function calculateSimilarity(record, input) {
+function calculateSimilarity(record, prevRecord, input) {
     let score = 0;
     
     // Categorical matching (Weights: Personal = 1.0, Foreign = 1.0, Institutional = 1.0)
@@ -815,13 +897,20 @@ function calculateSimilarity(record, input) {
     if (record.institutional === input.institutional) score += 1.0;
     
     // Short selling ratio matching (Weight = 1.0)
-    if (input.shortRatio !== null && record.shortRatio !== null) {
+    if (input.shortRatio !== null && record.shortRatio !== null && prevRecord && prevRecord.shortRatio !== null) {
+        // 1. Numeric closeness (0.5 weight)
         const diff = Math.abs(record.shortRatio - input.shortRatio);
-        // within 1% diff gets maximum weight, linear decay up to 5% diff
-        const shortScore = Math.max(0, 1.0 - (diff / 0.05));
+        const numericScore = Math.max(0, 1.0 - (diff / 0.05));
+        
+        // 2. Trend direction matching (0.5 weight)
+        const histShortDiff = record.shortRatio - prevRecord.shortRatio;
+        const histTrend = histShortDiff > 0 ? 'up' : (histShortDiff < 0 ? 'down' : 'flat');
+        const trendScore = (histTrend === input.inputTrend) ? 1.0 : 0.0;
+        
+        const shortScore = (numericScore * 0.5) + (trendScore * 0.5);
         score += shortScore;
     } else {
-        // If short ratio input is not specified, ignore it in calculation
+        // If short ratio or prevRecord is not specified/available, ignore it in calculation
         score += 1.0;
     }
     
@@ -841,13 +930,18 @@ function runPrediction() {
     const institutional = document.querySelector('input[name="pred-institutional"]:checked').value;
     const shortRatio = parseFloat(document.getElementById('pred-short-ratio').value) / 100.0;
 
-    const inputData = { personal, foreign, institutional, shortRatio };
+    const latestRecord = state.records[state.records.length - 1];
+    const inputShortDiff = shortRatio - latestRecord.shortRatio;
+    const inputTrend = inputShortDiff > 0 ? 'up' : (inputShortDiff < 0 ? 'down' : 'flat');
+
+    const inputData = { personal, foreign, institutional, shortRatio, inputTrend };
 
     // 1. Calculate similarity for each record
     // We only calculate for records where we actually know the "next day's trend" (so skip the very last record)
+    // We also start at i = 1 because we need a previous day's shortRatio to calculate the trend
     const matches = [];
-    for (let i = 0; i < state.records.length - 1; i++) {
-        const similarity = calculateSimilarity(state.records[i], inputData);
+    for (let i = 1; i < state.records.length - 1; i++) {
+        const similarity = calculateSimilarity(state.records[i], state.records[i-1], inputData);
         // Include any match with similarity >= 0.5 (threshold)
         if (similarity >= 0.50) {
             matches.push({
@@ -892,13 +986,23 @@ function runPrediction() {
             return 'trend-flat';
         };
 
+        const prevRecord = state.records[m.index - 1];
+        let shortRatioDisplay = `${(m.record.shortRatio * 100).toFixed(2)}%`;
+        if (prevRecord && prevRecord.shortRatio !== null) {
+            const diff = m.record.shortRatio - prevRecord.shortRatio;
+            const diffStr = diff > 0 ? `+${(diff * 100).toFixed(2)}%` : `${(diff * 100).toFixed(2)}%`;
+            const diffColor = diff > 0 ? '#10b981' : (diff < 0 ? '#ef4444' : '#94a3b8');
+            const diffIcon = diff > 0 ? '↑' : (diff < 0 ? '↓' : '→');
+            shortRatioDisplay += ` <span style="font-size: 0.75rem; color: ${diffColor}; font-weight: 600;">(${diffIcon} ${diffStr})</span>`;
+        }
+
         tr.innerHTML = `
             <td style="font-weight: 500;">${m.record.date}</td>
             <td style="color: var(--accent-secondary); font-weight: 700;">${(m.similarity * 100).toFixed(0)}%</td>
             <td>${getFlowIcon(m.record.personal)}</td>
             <td>${getFlowIcon(m.record.foreign)}</td>
             <td>${getFlowIcon(m.record.institutional)}</td>
-            <td>${(m.record.shortRatio * 100).toFixed(2)}%</td>
+            <td>${shortRatioDisplay}</td>
             <td>${m.record.trend}</td>
             <td class="highlight-column ${getTrendClass(m.nextRecord.trend)}">${m.nextRecord.trend}</td>
         `;
@@ -1074,10 +1178,19 @@ function setupForms() {
     // Search date input
     document.getElementById('search-date').addEventListener('input', renderRecordsTable);
 
-    // Slider label updates
+    // Number input updates
     const shortRatioInput = document.getElementById('pred-short-ratio');
     shortRatioInput.addEventListener('input', (e) => {
-        document.getElementById('short-val-label').textContent = parseFloat(e.target.value).toFixed(2) + '%';
+        shortRatioInput.dataset.userModified = 'true';
+        const val = parseFloat(e.target.value) || 0;
+        updateShortRatioCompareLabel(val);
+    });
+
+    shortRatioInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            runPrediction();
+        }
     });
 
     // Run prediction button

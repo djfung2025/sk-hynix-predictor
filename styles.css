@@ -629,6 +629,27 @@ canvas {
     color: var(--text-secondary);
 }
 
+.input-with-suffix {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-with-suffix input {
+    width: 100%;
+    padding-right: 36px !important;
+}
+
+.input-suffix {
+    position: absolute;
+    right: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
 /* Segmented Control */
 .segmented-control {
     display: flex;
