@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海力士交易记录与走势预测系统</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for beautiful charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+                <div class="logo-text">
+                    <h2>SK Hynix</h2>
+                    <span>Trend Predictor</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-tab="dashboard">
+                    <i class="fa-solid fa-gauge"></i>
+                    <span>交易仪表盘</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="predict">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>走势预测</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="add-record">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>新增记录</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="settings">
+                    <i class="fa-solid fa-gears"></i>
+                    <span>系统设置</span>
+                </a>
+            </nav>
+            
+            <div class="sync-status-card" id="sync-status-sidebar">
+                <div class="status-indicator offline"></div>
+                <div class="status-info">
+                    <p class="status-title">本地存储模式</p>
+                    <p class="status-desc">未连接 GitHub 仓库</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <div class="welcome-text">
+                    <h1 id="page-title">交易数据仪表盘</h1>
+                    <p id="page-subtitle">监控海力士近期资金净流入流出与卖空比数据</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="quick-sync-btn">
+                        <i class="fa-solid fa-arrows-rotate"></i> 立即同步
+                    </button>
+                </div>
+            </header>
+
+            <!-- Sync Alert Banner -->
+            <div class="alert-banner" id="sync-alert">
+                <div class="alert-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <div class="alert-text">
+                    <strong>提示：</strong> 当前数据保存在本地浏览器中。建议在“系统设置”中配置 GitHub Sync，即可发布到 <strong>github.io</strong> 并支持多端云同步。
+                </div>
+                <button class="alert-close" onclick="document.getElementById('sync-alert').style.display='none'">&times;</button>
+            </div>
+
+            <!-- Tab Content: Dashboard -->
+            <section class="tab-content active" id="tab-dashboard">
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i class="fa-solid fa-database"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-label">总记录天数</span>
+                            <h3 class="stat-value" id="stat-total-days">-</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fa-solid fa-percent"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-label">平均卖空比</span>
+                            <h3 class="stat-value" id="stat-avg-short">-</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-label">外资净流入占比</span>
+                            <h3 class="stat-value" id="stat-foreign-in">-</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-label">最常出现走势</span>
+                            <h3 class="stat-value" id="stat-common-trend" style="font-size: 1.1rem; line-height: 1.8;">-</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Section -->
+                <div class="dashboard-charts grid-2">
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3>卖空比与外资比例走势图</h3>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="trendChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3>走势分布与资金相关度</h3>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="distributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Records List -->
+                <div class="card table-card">
+                    <div class="card-header justify-between">
+                        <h3>交易历史记录</h3>
+                        <div class="table-actions">
+                            <input type="text" id="search-date" placeholder="搜索日期 (YYYY-MM-DD)">
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>个人</th>
+                                    <th>外资</th>
+                                    <th>外资比例</th>
+                                    <th>机构</th>
+                                    <th>卖空比</th>
+                                    <th>当日实际走势</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="records-table-body">
+                                <!-- Data rows inserted dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab Content: Predict -->
+            <section class="tab-content" id="tab-predict">
+                <div class="grid-3-2">
+                    <!-- Prediction Inputs -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-sliders"></i> 输入当日资金与指标</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="predict-form" class="interactive-form">
+                                <div class="form-group">
+                                    <label>个人资金净流入流出</label>
+                                    <div class="segmented-control">
+                                        <input type="radio" name="pred-personal" id="p-pos" value="正" checked>
+                                        <label for="p-pos" class="btn-pos">正 (净流入)</label>
+                                        <input type="radio" name="pred-personal" id="p-neg" value="负">
+                                        <label for="p-neg" class="btn-neg">负 (净流出)</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>外资资金净流入流出</label>
+                                    <div class="segmented-control">
+                                        <input type="radio" name="pred-foreign" id="f-pos" value="正">
+                                        <label for="f-pos" class="btn-pos">正 (净流入)</label>
+                                        <input type="radio" name="pred-foreign" id="f-neg" value="负" checked>
+                                        <label for="f-neg" class="btn-neg">负 (净流出)</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>机构资金净流入流出</label>
+                                    <div class="segmented-control">
+                                        <input type="radio" name="pred-institutional" id="i-pos" value="正">
+                                        <label for="i-pos" class="btn-pos">正 (净流入)</label>
+                                        <input type="radio" name="pred-institutional" id="i-neg" value="负" checked>
+                                        <label for="i-neg" class="btn-neg">负 (净流出)</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pred-short-ratio">卖空比 (当前选择: <span id="short-val-label">3.00%</span>)</label>
+                                    <input type="range" id="pred-short-ratio" min="0" max="15" step="0.1" value="3.0">
+                                    <div class="slider-ticks">
+                                        <span>0%</span>
+                                        <span>5%</span>
+                                        <span>10%</span>
+                                        <span>15%</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-primary w-full" id="run-prediction-btn">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i> 运行智能走势预测
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Prediction Results -->
+                    <div class="card result-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-chart-simple"></i> 预测第二日走势结果</h3>
+                        </div>
+                        <div class="card-body prediction-container">
+                            <div class="prediction-main" id="prediction-outcome-wrapper">
+                                <span class="prediction-title">最有可能的第二日走势</span>
+                                <h2 class="prediction-val" id="predicted-trend-name">输入数据以启动预测</h2>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" id="prediction-confidence-bar" style="width: 0%;"></div>
+                                </div>
+                                <span class="prediction-confidence" id="prediction-confidence-label">置信度: -</span>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div class="prediction-details">
+                                <h4>预测概率分布：</h4>
+                                <div class="distribution-list" id="prediction-dist-list">
+                                    <!-- Dynamic list of probabilities -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Historical Days -->
+                <div class="card mt-24">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-clock-rotate-left"></i> 历史相似交易日匹配（及次日走势）</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>历史匹配日期</th>
+                                    <th>匹配度</th>
+                                    <th>个人</th>
+                                    <th>外资</th>
+                                    <th>机构</th>
+                                    <th>卖空比</th>
+                                    <th>当日实际走势</th>
+                                    <th class="highlight-column">次日（第二天）走势</th>
+                                </tr>
+                            </thead>
+                            <tbody id="similar-days-table-body">
+                                <tr>
+                                    <td colspan="8" class="text-center text-muted py-20">请在上方表单中配置条件并运行预测</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab Content: Add Record -->
+            <section class="tab-content" id="tab-add-record">
+                <div class="card max-w-700 m-auto">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-circle-plus"></i> 新增当天交易记录</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="add-record-form" class="interactive-form">
+                            <div class="grid-2 gap-16">
+                                <div class="form-group">
+                                    <label for="add-date">交易日期</label>
+                                    <input type="date" id="add-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-foreign-ratio">外资比例 (%)</label>
+                                    <input type="number" id="add-foreign-ratio" min="0" max="100" step="0.01" placeholder="例如: 52.37" required>
+                                </div>
+                            </div>
+
+                            <div class="grid-3 gap-16">
+                                <div class="form-group">
+                                    <label for="add-personal">个人资金</label>
+                                    <select id="add-personal" required>
+                                        <option value="正">正 (净流入)</option>
+                                        <option value="负">负 (净流出)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-foreign">外资资金</label>
+                                    <select id="add-foreign" required>
+                                        <option value="正">正 (净流入)</option>
+                                        <option value="负" selected>负 (净流出)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-institutional">机构资金</label>
+                                    <select id="add-institutional" required>
+                                        <option value="正">正 (净流入)</option>
+                                        <option value="负" selected>负 (净流出)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid-2 gap-16">
+                                <div class="form-group">
+                                    <label for="add-short-ratio">当天卖空比 (%)</label>
+                                    <input type="number" id="add-short-ratio" min="0" max="100" step="0.01" placeholder="例如: 3.36" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-trend">当日实际走势</label>
+                                    <input type="text" id="add-trend" list="common-trends" placeholder="例如: 小幅低开，收盘大涨" required>
+                                    <datalist id="common-trends">
+                                        <option value="高开低走，收跌">
+                                        <option value="小幅低开，收盘大涨">
+                                        <option value="小幅高开，收盘小跌">
+                                        <option value="小幅低开，收盘大跌">
+                                        <option value="小幅低开，收盘小涨">
+                                        <option value="小幅低开，平收">
+                                        <option value="小幅高开，收盘大涨">
+                                        <option value="平开平收">
+                                        <option value="高开，收盘大涨">
+                                        <option value="小幅高开，收盘小涨">
+                                        <option value="小幅低开，收盘小跌">
+                                        <option value="低开，收盘大跌">
+                                        <option value="高开，收盘小涨">
+                                        <option value="高开走V，收盘小涨">
+                                        <option value="平开，收盘大涨">
+                                        <option value="平开，收盘大跌">
+                                        <option value="小幅高开，收盘平">
+                                        <option value="低开走高再走低，收盘大跌">
+                                        <option value="高开走V，收盘大涨">
+                                    </datalist>
+                                </div>
+                            </div>
+
+                            <div class="form-actions mt-24">
+                                <button type="submit" class="btn btn-primary w-full" id="submit-record-btn">
+                                    <i class="fa-solid fa-floppy-disk"></i> 保存并发布记录
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab Content: Settings -->
+            <section class="tab-content" id="tab-settings">
+                <div class="card max-w-700 m-auto">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-cloud-arrow-up"></i> GitHub Sync 配置（云端多端同步）</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="settings-intro">
+                            <p>配置 GitHub 同步后，您的数据将被直接提交并保存在您的 repository 中，系统将自动触发 <strong>github.io</strong> 重新部署，确保无论在手机、iPad 还是其他电脑上，访问到的都是最新的统一数据库。</p>
+                        </div>
+                        
+                        <form id="settings-form" class="interactive-form">
+                            <div class="form-group">
+                                <label for="sync-github-username">GitHub 用户名 (Username)</label>
+                                <input type="text" id="sync-github-username" placeholder="例如: your-github-name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sync-github-repo">GitHub 仓库名称 (Repository)</label>
+                                <input type="text" id="sync-github-repo" placeholder="例如: sk-hynix-predictor" required>
+                                <span class="input-tip">请确保该仓库已开启 GitHub Pages (github.io)</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sync-github-branch">GitHub 分支名 (Branch)</label>
+                                <input type="text" id="sync-github-branch" value="main" placeholder="例如: main" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sync-github-token">GitHub 个人访问令牌 (Personal Access Token - PAT)</label>
+                                <input type="password" id="sync-github-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxx" required>
+                                <span class="input-tip">必须包含 <code>repo</code> 或 <code>contents: write</code> 权限。您的 Token 将仅被保存在您本地浏览器的 LocalStorage 中，不会上传给任何第三方。</span>
+                            </div>
+
+                            <div class="form-actions mt-24 grid-2 gap-16">
+                                <button type="button" class="btn btn-secondary" id="test-connection-btn">
+                                    测试连接
+                                </button>
+                                <button type="submit" class="btn btn-primary" id="save-settings-btn">
+                                    保存配置 & 立即同步
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <hr class="divider">
+                        
+                        <div class="github-deployment-guide">
+                            <h4>如何部署到 GitHub Pages？</h4>
+                            <ol>
+                                <li>在 GitHub 上创建一个新的公开或私有仓库，例如命名为 <code>sk-hynix-predictor</code>。</li>
+                                <li>将此项目的所有文件（<code>index.html</code>, <code>styles.css</code>, <code>app.js</code>, <code>data.json</code>）推送到该仓库。</li>
+                                <li>在仓库的 <strong>Settings -> Pages</strong> 菜单中，将 Build and deployment 的 Source 设置为 <strong>Deploy from a branch</strong>，选择 <strong>main</strong> 分支的 <strong>/ (root)</strong> 文件夹并保存。</li>
+                                <li>几分钟后，您的网站将通过 <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code> 访问。</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Application JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
