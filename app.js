@@ -975,6 +975,8 @@ function runPrediction() {
         document.getElementById('prediction-confidence-label').textContent = '置信度: -';
         document.getElementById('prediction-confidence-bar').style.width = '0%';
         document.getElementById('prediction-dist-list').innerHTML = '';
+        const changeWrapper = document.getElementById('predicted-change-wrapper');
+        if (changeWrapper) changeWrapper.style.display = 'none';
         return;
     }
 
@@ -995,6 +997,16 @@ function runPrediction() {
             return 'trend-flat';
         };
 
+        const getNextTrendDisplay = (nextRec) => {
+            const trendText = nextRec.trend;
+            if (nextRec.changeRatio !== undefined && nextRec.changeRatio !== null) {
+                const pct = nextRec.changeRatio * 100;
+                const pctStr = (pct > 0 ? '+' : '') + pct.toFixed(2) + '%';
+                return `${trendText} (${pctStr})`;
+            }
+            return trendText;
+        };
+
         const prevRecord = state.records[m.index - 1];
         let shortRatioDisplay = `${(m.record.shortRatio * 100).toFixed(2)}%`;
         if (prevRecord && prevRecord.shortRatio !== null) {
@@ -1013,14 +1025,16 @@ function runPrediction() {
             <td>${getFlowIcon(m.record.institutional)}</td>
             <td>${shortRatioDisplay}</td>
             <td>${m.record.trend}</td>
-            <td class="highlight-column ${getTrendClass(m.nextRecord.trend)}">${m.nextRecord.trend}</td>
+            <td class="highlight-column ${getTrendClass(m.nextRecord.trend)}">${getNextTrendDisplay(m.nextRecord)}</td>
         `;
         simTableBody.appendChild(tr);
     });
 
-    // 2. Aggregate weighted trends
+    // 2. Aggregate weighted trends and returns
     const weightedTrends = {};
     let totalWeight = 0;
+    let weightedChangeSum = 0;
+    let validChangeWeightSum = 0;
 
     matches.forEach(m => {
         const trend = m.nextRecord.trend;
@@ -1030,7 +1044,24 @@ function runPrediction() {
         const weight = Math.pow(m.similarity, 2);
         weightedTrends[trend] = (weightedTrends[trend] || 0) + weight;
         totalWeight += weight;
+
+        // Weighted changeRatio
+        const nextChange = m.nextRecord.changeRatio;
+        if (nextChange !== undefined && nextChange !== null) {
+            weightedChangeSum += nextChange * weight;
+            validChangeWeightSum += weight;
+        }
     });
+
+    // Compute weighted average predicted price return
+    let predictedChangePctStr = '';
+    let predictedChangeColor = '#94a3b8';
+    if (validChangeWeightSum > 0) {
+        const avgChange = weightedChangeSum / validChangeWeightSum;
+        const avgChangePct = avgChange * 100;
+        predictedChangePctStr = (avgChangePct > 0 ? '+' : '') + avgChangePct.toFixed(2) + '%';
+        predictedChangeColor = avgChangePct > 0 ? '#10b981' : (avgChangePct < 0 ? '#ef4444' : '#94a3b8');
+    }
 
     // Sort predictions by probability
     const sortedPredictions = [];
@@ -1057,6 +1088,19 @@ function runPrediction() {
         else if (bestPred.trend.includes('大跌')) predictedEl.style.color = '#ef4444';
         else if (bestPred.trend.includes('小跌')) predictedEl.style.color = '#f87171';
         else predictedEl.style.color = '#94a3b8';
+
+        // Render predicted actual price change
+        const changeWrapper = document.getElementById('predicted-change-wrapper');
+        const changeValEl = document.getElementById('predicted-change-val');
+        if (changeWrapper && changeValEl) {
+            if (predictedChangePctStr) {
+                changeWrapper.style.display = 'block';
+                changeValEl.textContent = predictedChangePctStr;
+                changeValEl.style.color = predictedChangeColor;
+            } else {
+                changeWrapper.style.display = 'none';
+            }
+        }
 
         // Render probability list
         const distList = document.getElementById('prediction-dist-list');
