@@ -718,7 +718,7 @@ function renderRecordsTable() {
     tableBody.innerHTML = '';
 
     if (state.records.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="8" class="text-center text-muted py-20">暂无交易数据</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="9" class="text-center text-muted py-20">暂无交易数据</td></tr>`;
         return;
     }
 
@@ -729,7 +729,7 @@ function renderRecordsTable() {
     });
 
     if (displayRecords.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="8" class="text-center text-muted py-20">未找到符合日期的记录</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="9" class="text-center text-muted py-20">未找到符合日期的记录</td></tr>`;
         return;
     }
 
@@ -751,6 +751,14 @@ function renderRecordsTable() {
             return 'trend-flat';
         };
 
+        const getChangeRatioDisplay = (val) => {
+            if (val === undefined || val === null) return `<span class="text-muted">-</span>`;
+            const pct = val * 100;
+            const pctStr = (pct > 0 ? '+' : '') + pct.toFixed(2) + '%';
+            const colorClass = pct > 0 ? 'trend-high-up' : (pct < 0 ? 'trend-high-down' : 'trend-flat');
+            return `<span class="${colorClass}" style="font-weight: 600;">${pctStr}</span>`;
+        };
+
         tr.innerHTML = `
             <td style="font-weight: 600;">${r.date}</td>
             <td>${getFlowBadge(r.personal)}</td>
@@ -758,6 +766,7 @@ function renderRecordsTable() {
             <td>${r.foreignRatio ? (r.foreignRatio * 100).toFixed(2) + '%' : '-'}</td>
             <td>${getFlowBadge(r.institutional)}</td>
             <td style="font-weight: 500;">${r.shortRatio ? (r.shortRatio * 100).toFixed(2) + '%' : '-'}</td>
+            <td>${getChangeRatioDisplay(r.changeRatio)}</td>
             <td class="${getTrendClass(r.trend)}">${r.trend}</td>
             <td>
                 <button class="btn-danger-link" onclick="deleteRecord('${r.date}')">
@@ -1078,6 +1087,7 @@ async function handleAddRecord(e) {
     const foreignRatio = parseFloat(document.getElementById('add-foreign-ratio').value) / 100.0;
     const institutional = document.getElementById('add-institutional').value;
     const shortRatio = parseFloat(document.getElementById('add-short-ratio').value) / 100.0;
+    const changeRatio = parseFloat(document.getElementById('add-change-ratio').value) / 100.0;
     const trend = document.getElementById('add-trend').value.trim();
 
     if (state.records.some(r => r.date === date)) {
@@ -1095,6 +1105,7 @@ async function handleAddRecord(e) {
         foreignRatio,
         institutional,
         shortRatio,
+        changeRatio,
         trend
     };
 
@@ -1121,6 +1132,7 @@ async function handleAddRecord(e) {
     // Refresh UI & Form Reset
     refreshUI();
     document.getElementById('add-trend').value = '';
+    document.getElementById('add-change-ratio').value = '';
     // Switch to Dashboard
     document.querySelector('.nav-item[data-tab="dashboard"]').click();
 }

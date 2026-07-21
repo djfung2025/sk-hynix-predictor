@@ -6,6 +6,7 @@
     "foreignRatio": 0.5251,
     "institutional": "负",
     "shortRatio": 0.0108,
+    "changeRatio": -0.0239,
     "trend": "高开低走，收跌"
   },
   {
@@ -15,6 +16,7 @@
     "foreignRatio": 0.5237,
     "institutional": "正",
     "shortRatio": 0.0336,
+    "changeRatio": 0.0768,
     "trend": "小幅低开，收盘大涨"
   },
   {
@@ -24,6 +26,7 @@
     "foreignRatio": 0.5236,
     "institutional": "负",
     "shortRatio": 0.044,
+    "changeRatio": -0.003,
     "trend": "小幅高开，收盘小跌"
   },
   {
@@ -33,6 +36,7 @@
     "foreignRatio": 0.5214,
     "institutional": "负",
     "shortRatio": 0.0324,
+    "changeRatio": -0.0766,
     "trend": "小幅低开，收盘大跌"
   },
   {
@@ -42,6 +46,7 @@
     "foreignRatio": 0.5206,
     "institutional": "正",
     "shortRatio": 0.008,
+    "changeRatio": 0.0115,
     "trend": "小幅低开，收盘小涨"
   },
   {
@@ -51,6 +56,7 @@
     "foreignRatio": 0.5187,
     "institutional": "负",
     "shortRatio": 0.0252,
+    "changeRatio": -0.0516,
     "trend": "小幅低开，收盘大跌"
   },
   {
@@ -60,6 +66,7 @@
     "foreignRatio": 0.5176,
     "institutional": "正",
     "shortRatio": 0.0212,
+    "changeRatio": 0,
     "trend": "小幅低开，平收"
   },
   {
@@ -69,6 +76,7 @@
     "foreignRatio": 0.5566,
     "institutional": "正",
     "shortRatio": 0.0268,
+    "changeRatio": 0.1117,
     "trend": "小幅高开，收盘大涨"
   },
   {
@@ -78,6 +86,7 @@
     "foreignRatio": 0.5161,
     "institutional": "正",
     "shortRatio": 0.0196,
+    "changeRatio": 0.0005,
     "trend": "平开平收"
   },
   {
@@ -87,6 +96,7 @@
     "foreignRatio": 0.5162,
     "institutional": "正",
     "shortRatio": 0.0581,
+    "changeRatio": 0.0571,
     "trend": "小幅高开，收盘大涨"
   },
   {
@@ -96,6 +106,7 @@
     "foreignRatio": 0.5166,
     "institutional": "正",
     "shortRatio": 0.0217,
+    "changeRatio": 0.0930,
     "trend": "高开，收盘大涨"
   },
   {
@@ -105,6 +116,7 @@
     "foreignRatio": 0.515,
     "institutional": "正",
     "shortRatio": 0.0548,
+    "changeRatio": 0.0205,
     "trend": "小幅低开，收盘小涨"
   },
   {
@@ -114,6 +126,7 @@
     "foreignRatio": 0.5144,
     "institutional": "正",
     "shortRatio": 0.0693,
+    "changeRatio": 0.0192,
     "trend": "小幅高开，收盘小涨"
   },
   {
@@ -123,6 +136,7 @@
     "foreignRatio": 0.5134,
     "institutional": "正",
     "shortRatio": 0.0276,
+    "changeRatio": 0.0128,
     "trend": "小幅低开，收盘小涨"
   },
   {
@@ -132,6 +146,7 @@
     "foreignRatio": 0.513,
     "institutional": "正",
     "shortRatio": 0.0415,
+    "changeRatio": -0.0012,
     "trend": "平开平收"
   },
   {
@@ -141,6 +156,7 @@
     "foreignRatio": 0.5127,
     "institutional": "正",
     "shortRatio": 0.0672,
+    "changeRatio": -0.0262,
     "trend": "小幅低开，收盘小跌"
   },
   {
@@ -150,6 +166,7 @@
     "foreignRatio": 0.5116,
     "institutional": "负",
     "shortRatio": 0.054,
+    "changeRatio": -0.0992,
     "trend": "低开，收盘大跌"
   },
   {
@@ -159,6 +176,7 @@
     "foreignRatio": 0.5115,
     "institutional": "负",
     "shortRatio": 0.0433,
+    "changeRatio": -0.0768,
     "trend": "低开，收盘大跌"
   },
   {
@@ -168,6 +186,7 @@
     "foreignRatio": 0.5109,
     "institutional": "正",
     "shortRatio": 0.0687,
+    "changeRatio": 0.159,
     "trend": "高开，收盘大涨"
   },
   {
@@ -177,6 +196,7 @@
     "foreignRatio": 0.5105,
     "institutional": "负",
     "shortRatio": 0.0404,
+    "changeRatio": -0.0753,
     "trend": "小幅低开，收盘大跌"
   },
   {
@@ -186,6 +206,7 @@
     "foreignRatio": 0.511,
     "institutional": "负",
     "shortRatio": 0.0369,
+    "changeRatio": 0.0258,
     "trend": "小幅低开，收盘小涨"
   },
   {
@@ -195,6 +216,7 @@
     "foreignRatio": 0.5119,
     "institutional": "负",
     "shortRatio": 0.0602,
+    "changeRatio": 0.0233,
     "trend": "高开，收盘小涨"
   },
   {
@@ -204,6 +226,7 @@
     "foreignRatio": 0.5123,
     "institutional": "正",
     "shortRatio": 0.0412,
+    "changeRatio": 0.0641,
     "trend": "高开，收盘大涨"
   },
   {
@@ -213,6 +236,7 @@
     "foreignRatio": 0.5129,
     "institutional": "正",
     "shortRatio": 0.0291,
+    "changeRatio": 0.041,
     "trend": "高开走V，收盘小涨"
   },
   {
@@ -222,6 +246,7 @@
     "foreignRatio": 0.513,
     "institutional": "正",
     "shortRatio": 0.016,
+    "changeRatio": 0.0583,
     "trend": "小幅低开，收盘大涨"
   },
   {
@@ -231,6 +256,7 @@
     "foreignRatio": 0.5131,
     "institutional": "正",
     "shortRatio": 0.0342,
+    "changeRatio": 0.0650,
     "trend": "小幅高开，收盘大涨"
   },
   {
@@ -240,6 +266,7 @@
     "foreignRatio": 0.5125,
     "institutional": "正",
     "shortRatio": 0.041,
+    "changeRatio": 0.0294,
     "trend": "高开，收盘小涨"
   },
   {
@@ -249,6 +276,7 @@
     "foreignRatio": 0.5115,
     "institutional": "正",
     "shortRatio": 0.0148,
+    "changeRatio": 0.056,
     "trend": "平开，收盘大涨"
   },
   {
@@ -258,6 +286,7 @@
     "foreignRatio": 0.5099,
     "institutional": "负",
     "shortRatio": 0.053,
+    "changeRatio": -0.1247,
     "trend": "平开，收盘大跌"
   },
   {
@@ -267,6 +296,7 @@
     "foreignRatio": 0.5078,
     "institutional": "正",
     "shortRatio": 0.0746,
+    "changeRatio": 0.0097,
     "trend": "小幅高开，收盘平"
   },
   {
@@ -276,6 +306,7 @@
     "foreignRatio": 0.5077,
     "institutional": "正",
     "shortRatio": 0.0317,
+    "changeRatio": 0.1306,
     "trend": "高开，收盘大涨"
   },
   {
@@ -285,6 +316,7 @@
     "foreignRatio": 0.5063,
     "institutional": "负",
     "shortRatio": 0.0688,
+    "changeRatio": -0.0836,
     "trend": "小幅低开，收盘大跌"
   },
   {
@@ -294,6 +326,7 @@
     "foreignRatio": 0.5044,
     "institutional": "正",
     "shortRatio": 0.0595,
+    "changeRatio": -0.0168,
     "trend": "小幅低开，收盘小跌"
   },
   {
@@ -303,6 +336,7 @@
     "foreignRatio": 0.5036,
     "institutional": "正",
     "shortRatio": 0.0263,
+    "changeRatio": 0.0083,
     "trend": "小幅高开，收盘小涨"
   },
   {
@@ -312,6 +346,7 @@
     "foreignRatio": 0.504,
     "institutional": "负",
     "shortRatio": 0.0534,
+    "changeRatio": -0.0339,
     "trend": "小幅高开，收盘小跌"
   },
   {
@@ -321,6 +356,7 @@
     "foreignRatio": 0.5028,
     "institutional": "负",
     "shortRatio": 0.0249,
+    "changeRatio": -0.1457,
     "trend": "低开，收盘大跌"
   },
   {
@@ -330,6 +366,7 @@
     "foreignRatio": 0.5017,
     "institutional": "正",
     "shortRatio": 0.0064,
+    "changeRatio": 0.1088,
     "trend": "小幅高开，收盘大涨"
   },
   {
@@ -339,6 +376,7 @@
     "foreignRatio": 0.5017,
     "institutional": "负",
     "shortRatio": 0.025,
+    "changeRatio": -0.0338,
     "trend": "小幅高开，收盘小跌"
   },
   {
@@ -348,6 +386,7 @@
     "foreignRatio": 0.5006,
     "institutional": "负",
     "shortRatio": 0.0328,
+    "changeRatio": -0.0606,
     "trend": "小幅低开，收盘大跌"
   },
   {
@@ -357,6 +396,7 @@
     "foreignRatio": 0.5005,
     "institutional": "负",
     "shortRatio": 0.0076,
+    "changeRatio": -0.0567,
     "trend": "低开走高再走低，收盘大跌"
   },
   {
@@ -366,6 +406,7 @@
     "foreignRatio": 0.5001,
     "institutional": "正",
     "shortRatio": 0.0101,
+    "changeRatio": 0.0529,
     "trend": "高开走V，收盘大涨"
   },
   {
@@ -375,6 +416,7 @@
     "foreignRatio": 0.4987,
     "institutional": "正",
     "shortRatio": 0.0526,
+    "changeRatio": -0.0027,
     "trend": "小幅高开，收盘小跌"
   },
   {
@@ -384,6 +426,7 @@
     "foreignRatio": 0.4977,
     "institutional": "负",
     "shortRatio": 0.041,
+    "changeRatio": -0.1536,
     "trend": "平开，收盘大跌"
   },
   {
@@ -393,6 +436,7 @@
     "foreignRatio": 0.4988,
     "institutional": "正",
     "shortRatio": 0.0154,
+    "changeRatio": 0.0368,
     "trend": "小幅低开，收盘小涨"
   },
   {
@@ -402,6 +446,7 @@
     "foreignRatio": 0.5244,
     "institutional": "正",
     "shortRatio": 0.0173,
+    "changeRatio": 0.0883,
     "trend": "高开，收盘大涨"
   },
   {
@@ -411,15 +456,7 @@
     "foreignRatio": 0.5237,
     "institutional": "负",
     "shortRatio": 0.0305,
+    "changeRatio": -0.1152,
     "trend": "低开，收盘大跌"
-  },
-  {
-    "date": "2026-07-20",
-    "personal": "正",
-    "foreign": "正",
-    "foreignRatio": 0.524,
-    "institutional": "负",
-    "shortRatio": 0.022799999999999997,
-    "trend": "高开低走，收盘大跌"
   }
 ]
