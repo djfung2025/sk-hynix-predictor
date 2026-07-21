@@ -898,33 +898,50 @@ function renderCharts() {
 
 // Calculate similarity for predictions
 function calculateSimilarity(record, prevRecord, input) {
+    // Weight definitions: prioritize Foreign Flow and Short Selling Ratio
+    const weightPersonal = 0.5;      // 10% influence
+    const weightInstitutional = 0.5; // 10% influence
+    const weightForeign = 2.0;       // 40% influence
+    const weightShortRatio = 2.0;    // 40% influence
+    
+    const maxScore = weightPersonal + weightInstitutional + weightForeign + weightShortRatio; // 5.0
+    
     let score = 0;
     
-    // Categorical matching (Weights: Personal = 1.0, Foreign = 1.0, Institutional = 1.0)
-    if (record.personal === input.personal) score += 1.0;
-    if (record.foreign === input.foreign) score += 1.0;
-    if (record.institutional === input.institutional) score += 1.0;
+    // 1. Personal Flow matching
+    if (record.personal === input.personal) {
+        score += weightPersonal;
+    }
     
-    // Short selling ratio matching (Weight = 1.0)
+    // 2. Institutional Flow matching
+    if (record.institutional === input.institutional) {
+        score += weightInstitutional;
+    }
+    
+    // 3. Foreign Flow matching (Increased weight)
+    if (record.foreign === input.foreign) {
+        score += weightForeign;
+    }
+    
+    // 4. Short selling ratio matching (Increased weight)
     if (input.shortRatio !== null && record.shortRatio !== null && prevRecord && prevRecord.shortRatio !== null) {
-        // 1. Numeric closeness (0.5 weight)
+        // 4.1 Numeric closeness (0.5 sub-weight)
         const diff = Math.abs(record.shortRatio - input.shortRatio);
         const numericScore = Math.max(0, 1.0 - (diff / 0.05));
         
-        // 2. Trend direction matching (0.5 weight)
+        // 4.2 Trend direction matching (0.5 sub-weight)
         const histShortDiff = record.shortRatio - prevRecord.shortRatio;
         const histTrend = histShortDiff > 0 ? 'up' : (histShortDiff < 0 ? 'down' : 'flat');
         const trendScore = (histTrend === input.inputTrend) ? 1.0 : 0.0;
         
         const shortScore = (numericScore * 0.5) + (trendScore * 0.5);
-        score += shortScore;
+        score += shortScore * weightShortRatio;
     } else {
-        // If short ratio or prevRecord is not specified/available, ignore it in calculation
-        score += 1.0;
+        // Fallback to avoid penalizing if historical data is missing
+        score += weightShortRatio;
     }
     
-    // Max possible score is 4
-    return score / 4.0;
+    return score / maxScore;
 }
 
 // Run Predictor Logic
