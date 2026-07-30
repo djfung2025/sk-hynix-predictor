@@ -518,5 +518,15 @@
     "shortRatio": 0.0225,
     "changeRatio": 0.032400000000000005,
     "trend": "小幅低开，收盘小涨"
+  },
+  {
+    "date": "2026-07-29",
+    "personal": "负",
+    "foreign": "负",
+    "foreignRatio": 0.5077,
+    "institutional": "正",
+    "shortRatio": 0.029500000000000002,
+    "changeRatio": -0.056299999999999996,
+    "trend": "小幅高开，收盘大跌"
   }
 ]
